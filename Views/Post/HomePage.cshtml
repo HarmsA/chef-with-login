@@ -1,0 +1,24 @@
+ <h1>Chefs | <a href="dishes">Dishes</a></h1>
+
+<p>Check out our roster of Chefs!</p>
+@model DashboardVM
+<a href="addChef">Add a Chef</a>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>DOB</th>
+            <th># of Dishes</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in ViewBag.AllChefs)
+        {
+            <tr>
+                <td>@user.Fname</td>
+                <td>@user.DOB</td>
+                <td>@user.Dishlist.Count</td>
+            </tr>
+        }
+    </tbody>
+</table>

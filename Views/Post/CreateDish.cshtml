@@ -1,0 +1,34 @@
+@model Post
+<h1>Add Dish</h1>
+ <a href="home">Home</a></p>
+<form action="dishcreator" method="POST">
+    <div class="form-group">
+        <span asp-validation-for="Dish"></span>
+        <label asp-for="Dish"></label>
+        <input asp-for="Dish">
+    </div>
+
+    <div class="form-group">
+        <span asp-validation-for="Calories"></span>
+        <label asp-for="Calories"></label>
+        <input asp-for="Calories">
+    </div>
+
+    <div class="form-group">
+        <span asp-validation-for="Taste"></span>
+        <label asp-for="Taste"></label>
+        <select asp-for="Taste">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <span asp-validation-for="Description"></span>
+        <label asp-for="Description"></label>
+        <input asp-for="Description">
+    </div>
+    <input type="submit" value="Add Dish">
+</form>

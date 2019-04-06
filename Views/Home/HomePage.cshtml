@@ -1,0 +1,22 @@
+<h1>Chefs | Dishes</h1>
+
+<p>Check out our roster of Chefs!</p>
+@model DashboardVM
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th># of Dishes</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model.AllPosts)
+        {
+            <tr>
+                <td>@user.Chef.Fname</td>
+            </tr>
+        }
+        <td></td>
+    </tbody>
+</table>

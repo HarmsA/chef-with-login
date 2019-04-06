@@ -1,0 +1,28 @@
+ <h1><a href="home">Chefs</a> | Dishes</h1>
+  <a href="createDish">Add a Dish</a></p>
+
+
+<p>Check out our Awesome food options!</p>
+@model DashboardVM
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Chef</th>
+            <th>Tastiness</th>
+            <th>Calories</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model.AllPosts)
+        {
+            <tr>
+                <td>@user.Dish</td>
+                <td>@user.Chef.Fname</td>
+                <td>@user.Taste</td>
+                <td>@user.Calories</td>
+            </tr>
+        }
+        <td></td>
+    </tbody>
+</table>
